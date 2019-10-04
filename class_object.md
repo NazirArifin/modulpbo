@@ -50,9 +50,10 @@ h.berbunyi(); // mengakses method
 * Selanjutnya ketikkan kode berikut di Class Bangun Datar:
 
 ```java
-package myapp;
+package your.app.package;
 
 class BangunDatar {
+    
     // property panjang dan lebar
     double panjang;
     double lebar;
@@ -68,7 +69,7 @@ class BangunDatar {
 * Untuk beberapa contoh menggunakan class diatas, ketikkan kode berikut di file __Main.java__ (__class Main__):
 
 ```java
-package myapp;
+package your.app.package;
 
 import java.util.Scanner;
 
