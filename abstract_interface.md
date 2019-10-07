@@ -126,11 +126,11 @@ package your.app.package;
 // contoh class meng-extends abstract class
 public final class Kotak extends SegiEmpat {
     
-    Kotak() {
+    public Kotak() {
         setPanjang(1);
         setLebar(1);
     }
-    Kotak(double panjang, double lebar) {
+    public Kotak(double panjang, double lebar) {
         setPanjang(panjang);
         setLebar(lebar);
     }
@@ -164,12 +164,12 @@ public final class Balok implements BangunDatar, BangunRuang {
     private double lebar;
     private double tinggi;
     
-    Balok() {
+    public Balok() {
         setPanjang(1);
         setLebar(1);
         setTinggi(1);
     }
-    Balok(double panjang, double lebar, double tinggi) {
+    public Balok(double panjang, double lebar, double tinggi) {
         setPanjang(panjang);
         setLebar(lebar);
         setTinggi(tinggi);

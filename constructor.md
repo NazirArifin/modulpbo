@@ -22,17 +22,17 @@ Tujuan pembelajaran: Mahasiswa dapat memahami konsep _class constructor_ dalam p
 ```java
 package your.app.package;
 
-class BangunDatar {
+public class BangunDatar {
     
     protected double panjang, lebar;
     
     // constructor tanpa parameter
-    BangunDatar() {
+    public BangunDatar() {
         panjang = 10; // beri nilai default
         lebar = 10; // beri nilai default
     }
     // constructor dengan parameter
-    BangunDatar(double panjang, double lebar) {
+    public BangunDatar(double panjang, double lebar) {
         setPanjang(panjang);
         setLebar(lebar);
     }

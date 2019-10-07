@@ -36,7 +36,7 @@ public class Buku {
     private final String judul;
     private final String pengarang;
     
-    Buku(String judul, String pengarang) {
+    public Buku(String judul, String pengarang) {
         this.judul = judul;
         this.pengarang = pengarang;
     }

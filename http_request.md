@@ -87,7 +87,7 @@ public class HttpRequests {
 * Untuk contoh menggunakan class diatas, ketikkan kode berikut di file __Main.java__ (__class Main__):
 
 ```java
-package http;
+package your.app.package;
 
 import java.util.HashMap;
 import java.util.Map;

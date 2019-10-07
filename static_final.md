@@ -68,7 +68,7 @@ public class Mahasiswa {
     private int prodi = 0;
     public static String universitas = "Universitas Madura";
     
-    Mahasiswa(String npm, String nama) {
+    public Mahasiswa(String npm, String nama) {
         this.npm = npm;
         this.nama = nama;
     }

@@ -32,7 +32,7 @@ public class Buku {
     private final int id;
     private final String pengarang;
     
-    Buku(int id, String judul, String pengarang) {
+    public Buku(int id, String judul, String pengarang) {
         this.id = id;
         this.judul = judul;
         this.pengarang = pengarang;
