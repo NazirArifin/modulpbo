@@ -166,5 +166,5 @@ public class Main {
 
 * Sebuah loket tempat wisata membuat aplikasi menghitung biaya total tiket masuk untuk beberapa kendaraan berdasarkan pada jenis (BUS, MINIBUS, MOBIL, SEPEDA MOTOR) dan berapa orang yang ada di kendaraan tersebut. Selesaikan permasalahan berikut ini dengan menggunakan inheritance!
 
-1. Buat class Kendaraan sebagai Class induk dengan property: jenis, jumlah penumpang, biaya tiket kendaraan, dan biaya tiket perpenumpang
-2. Buat beberapa class anak (BUS, MINIBUS, MOBIL, SEPEDA MOTOR) berdasarkan class Kendaraan dan tentukan berapa total yang harus dibayar oleh kendaraan ini dengan asumsi semua kendaraan penumpangnya terisi penuh 
+1. Buat class Kendaraan sebagai Class induk dengan property: jenis, jumlah penumpang, biaya tiket kendaraan, dan biaya tiket perpenumpang.
+2. Buat beberapa class anak (BUS, MINIBUS, MOBIL, SEPEDA MOTOR) berdasarkan class Kendaraan dan tentukan berapa total yang harus dibayar oleh kendaraan ini dengan asumsi semua kendaraan penumpangnya terisi penuh dengan kondisi untuk Bus ditambah pajak 5% dari total pembayaran, dan Minibus ditambah pajak 2% dari total pembayaran
