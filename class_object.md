@@ -21,6 +21,13 @@ class Hewan {
 }
 ```
 
+```php
+<?php
+class Hewan {
+  ...
+}
+```
+
 2. Nama Class umumnya dimulai dengan huruf kapital dan jika terdiri dari lebih dari satu kata maka kata berikutnya huruf awalnya juga menggunakan huruf kapital. Contohnya adalah: ```class SegiTiga```, ```class BujurSangkar```, ```class User```, dll
 3. Sebuah  Class pada umumnya memiliki _property_ dan _method_ tapi ada kalanya sebuah Class hanya memiliki property saja atau method saja. Ini berarti bahwa Class tidak harus memiliki property dan method secara bersamaan.
 4. Nama __method__ biasanya dalam bentuk kata kerja karena pada umumnya method akan melakukan sesuatu hal khusus dalam Class tersebut.
@@ -33,6 +40,10 @@ class Hewan {
   Hewan h = new Hewan(); // NamaKelas namavariabel = new NamaKelas();
   ```
 
+  ```php
+  $h = new Hewan();
+  ```
+
 * Beberapa catatan dari penggunaan Objek adalah:
 
 1. Sebuah Class bisa memiliki banyak (lebih dari satu) Objek yang memiliki method dan nilai property-nya masing-masing.
@@ -42,6 +53,12 @@ class Hewan {
 Hewan h = new Hewan();
 h.nama = "Kitty"; // mengakses property
 h.berbunyi(); // mengakses method
+```
+
+```php
+$h = new Hewan();
+$h->nama = 'Kitty';
+$h->berbunyi();
 ```
 
 ## Praktikum
@@ -62,6 +79,20 @@ class BangunDatar {
     double getLuas() {
         return panjang * lebar;
     }
+}
+```
+
+```php
+<?php
+class BangunDatar {
+  // propert panjang dan lebar
+  public $panjang;
+  public $lebar;
+
+  // method getLuas
+  function getLuas() {
+    return $this->panjang * $this->lebar;
+  }
 }
 ```
 
@@ -101,6 +132,35 @@ public class Main {
     
 }
 ```
+
+```php
+<?php
+<?php
+spl_autoload_register(function ($class) {
+  include $class . '.php';
+});
+
+$bd1 = new BangunDatar();
+echo $bd1->getLuas(), PHP_EOL;
+
+// Mengubah nilai di property
+$bd1->panjang = 10;
+$bd1->lebar = 5;
+$luasBd1 = $bd1->getLuas();
+echo $luasBd1, PHP_EOL;
+
+// Membuat objek baru dengan nama bd2
+$bd2 = new BangunDatar();
+echo $bd2->getLuas(), PHP_EOL;
+
+// Contoh input dari user
+echo 'Masukkan panjang bangun datar: ';
+$bd2->panjang = trim(fgets(STDIN));
+echo 'Masukkan lebar bangun datar: ';
+$bd2->lebar = trim(fgets(STDIN));
+echo 'Luas bangun Datar: ', $bd2->getLuas(), PHP_EOL;
+```
+
 
 * Jalankan aplikasi dan Anda akan dapat melihat hasil penggunaan class BangunDatar yang telah kita buat
 
