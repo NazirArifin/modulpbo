@@ -64,6 +64,39 @@ class BangunDatar {
 }
 ```
 
+```php
+<?php
+class BangunDatar {
+  private float $panjang;
+  private float $lebar;
+
+  public function getPanjang(): float {
+    return $this->panjang;
+  }
+  public function setPanjang(float $panjang): void {
+    // setter dengan validasi
+    if ($panjang < 1) {
+      $this->panjang = 1;
+    } else {
+      $this->panjang = $panjang;
+    }
+  }
+  // getter dan setter lebar
+  public function getLebar(): float {
+    return $this->lebar;
+  }
+  public function setLebar(float $lebar) {
+    // ternary operator
+    $this->lebar = $lebar < 1 ? 1 : $lebar;
+  }
+
+  // method getLuas
+  public function getLuas(): float {
+    return $this->panjang * $this->lebar;
+  }
+}
+```
+
 * Untuk beberapa contoh menggunakan class diatas, ketikkan kode berikut di file __Main.java__ (__class Main__):
 
 ```java
@@ -80,6 +113,18 @@ public class Main {
     }
     
 }
+```
+
+```php
+<?php
+spl_autoload_register(function ($class) {
+  include $class . '.php';
+});
+
+$bd1 = new BangunDatar();
+$bd1->setPanjang(10); // mengeset nilai property
+$bd1->setLebar(3);
+echo $bd1->getLuas();
 ```
 
 * Jalankan aplikasi dan Anda akan dapat melihat hasil penggunaan class BangunDatar yang telah kita buat
