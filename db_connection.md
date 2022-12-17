@@ -251,7 +251,7 @@ try {
   print_r($buku);
 
   // tambah data ke tabel buku
-  $id = DB::insert('INSERT INTO buku (judul, pengarang, penerbit) VALUES (?, ?, ?)', ['Belajar PHP', 'Petani Kode', 'Petani Kode']);
+  $id = DB::insert('INSERT INTO buku VALUES (?, ?, ?, ?)', [NULL, 'Belajar PHP', 2022, 'Petani Kode']);
 
   // lihat data yang baru ditambahkan
   $buku = DB::select('SELECT * FROM buku WHERE id = ?', [$id]);
@@ -291,6 +291,15 @@ composer dump-autoload
 <?php
 require_once 'vendor/autoload.php';
 
+$faker = Faker\Factory::create();
+
+try {
+  $id = DB::insert('INSERT INTO buku (judul, tahun_terbit, pengarang) VALUES (?, ?, ?)', [$faker->text(), $faker->randomNumber(4, true), $faker->name()]);
+
+  $buku = DB::select('SELECT * FROM buku');
+} catch(Exception $e) {
+  echo $e->getMessage();
+}
 ...
 ```
 
