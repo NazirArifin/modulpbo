@@ -114,11 +114,11 @@ class PizzaVeggie extends Pizza {
 }
 
 class PizzaStore {
-  public function orderPizza($jenis): Pizza {
+  public function orderPizza($jenis, $adonan): Pizza {
     return match ($jenis) {
-      'pepperoni' => new PizzaPepperoni('Pepperoni', 'thin crust'),
-      'cheese' => new PizzaCheese('Cheese', 'regular crust'),
-      'veggie' => new PizzaVeggie('Veggie', 'thick crust'),
+      'pepperoni' => new PizzaPepperoni('Pepperoni', $adonan),
+      'cheese' => new PizzaCheese('Cheese', $adonan),
+      'veggie' => new PizzaVeggie('Veggie', $adonan),
     };
   }
 
@@ -138,14 +138,16 @@ class PizzaStore {
   }
 }
 
+
 $pizzaStore = new PizzaStore();
-$pizza = $pizzaStore->orderPizza('pepperoni');
-$pizza->addTopping('Pepperoni')
+$cheesePizza = $pizzaStore->orderPizza('cheese', 'regular crust');
+$cheesePizza->addTopping('Pepperoni')
   ->addTopping('Cheese')
   ->addSauce('Tomato Sauce')
   ->panggangPizza()
   ->addTopping('Mozzarella')
   ->addSauce('Barbeque Sauce');
-$pizzaStore->sajikanPizza($pizza);
-$pizzaStore->hargaPizza($pizza);
+
+$pizzaStore->sajikanPizza($cheesePizza);
+$pizzaStore->hargaPizza($cheesePizza);
 ```
