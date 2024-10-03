@@ -31,14 +31,18 @@ print(balok.hitung_luas())
 
 ** _Perhatikan bahwa di Python, atribut __boleh tidak dituliskan__. Jika atribut tidak didefinisikan, maka atribut tersebut akan dibuat secara otomatis ketika atribut tersebut diakses atau diubah_. 
 
-Pada contoh di atas, kita membuat sebuah class __BangunDatar__ yang memiliki dua atribut yaitu __panjang__ dan __lebar__. Ketika object dari class __BangunDatar__ dibuat, maka object tersebut akan memiliki dua atribut dengan nilai awal 10.
+Pada contoh di atas, kita membuat sebuah class __BangunDatar__ yang memiliki dua atribut yaitu __panjang__ dan __lebar__. Ketika object dari class __BangunDatar__ dibuat, kita dapat memberikan nilai awal untuk atribut __panjang__ dan __lebar__. Jika nilai __lebar__ tidak diberikan, maka nilai __lebar__ akan sama dengan nilai __panjang__.
 
 # Tugas Studi Kasus
 
-Kerjakan studi kasus berikut secara berkelompok. __DILARANG MENGGUNAKAN CHATGPT, Claude, Gemini, dan lainnya__. Kerjakan studi kasus ini dengan kemampuan dan pengetahuan kalian sendiri!. __Bagi yang terbukti melakukan kecurangan, maka akan mendapatkan sanksi__
+Kerjakan studi kasus berikut secara berkelompok. __DILARANG MENGGUNAKAN CHATGPT, CLAUDE, GEMINI, DAN LAINNYA__. Kerjakan studi kasus ini dengan kemampuan dan pengetahuan kalian sendiri karena ini adalah konsep dasar yang harus dipahami. __Bagi yang terbukti melakukan kecurangan, maka akan mendapatkan sanksi__
 
->Pembagian soal: Jumlahkan tanggal lahir anggota kelompok kalian, kemudian dimodulo 2. 
->Jika hasilnya 0, maka kerjakan soal Studi Kasus dengan nomor Genap. Jika hasilnya 1, maka kerjakan soal Studi Kasus dengan nomor Ganjil.
+---
+
+>__Pembagian soal: Jumlahkan tanggal lahir anggota kelompok kalian, kemudian dimodulo 2. 
+>Jika hasilnya 0, maka kerjakan soal nomor Genap. Jika hasilnya 1, maka kerjakan soal nomor Ganjil.__
+
+---
 
 
 __1. STUDI KASUS 1__
